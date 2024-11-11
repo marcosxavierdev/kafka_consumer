@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "a7be6697-3bb5-4974-9255-116777fb0f18",
+		"name": "Kafka_Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27270097"
+	},
+	"item": [
+		{
+			"name": "venda by factory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantidade\":1000,\r\n    \"valorTotal\": 10.00,\r\n    \"tipo\":\"factory\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/venda-factory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venda-factory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "venda by service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantidade\":10,\r\n    \"valorTotal\": 1000.00,\r\n    \"tipo\":\"service\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/venda-service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venda-service"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
