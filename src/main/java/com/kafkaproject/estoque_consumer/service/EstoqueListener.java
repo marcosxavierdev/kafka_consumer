@@ -18,7 +18,7 @@ public class EstoqueListener {
     private ObjectMapper objectMapper;
 
     // usando o KafkaConsumerConfig - ConsumerFactory
-    @KafkaListener(topics = KafkaConstants.TOPIC_PRODUCT_UODATE, groupId = "estoque-group")
+    @KafkaListener(topics = KafkaConstants.TOPIC_PRODUCT_UPDATE, groupId = KafkaConstants.TOPIC_GROUP_ID)
     public void processSale1(String message) throws JsonProcessingException {
         VendaDTO vendaDTO = objectMapper.readValue(message, VendaDTO.class);
         log.info("Info de Venda recebida: "
